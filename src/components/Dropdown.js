@@ -19,7 +19,7 @@ const Dropdown = ({ options, defaultOption, label }) => {
 
   return (
     <div className="input-group">
-      <label htmlFor={label}>{label}</label>
+      <h2>{label}</h2>
       <div className="dropdown-wrapper">
         <div className="dropdown" onClick={toggleDropdown}>
           <div className={`dropdown-input ${isOpen ? "rotate-arrow" : ""}`}>

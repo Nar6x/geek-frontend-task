@@ -17,7 +17,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="nav-container navbar">
+    // TODO: Create a hamburger menu in the header and hide this navbar
+    <div className="navbar">
       {navItems.map((item, index) => (
         <React.Fragment key={index}>
           <h1

@@ -9,7 +9,9 @@ const AlertsContent = () => {
         <div className="filters-container">
           <Filters />
         </div>
-        <Content />
+        <div className="content-container">
+          <Content />
+        </div>
       </div>
     </div>
   );
