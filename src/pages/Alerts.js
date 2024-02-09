@@ -1,8 +1,8 @@
 import React from "react";
-import Filters from "./alerts/Filters";
-import Content from "./alerts/Content";
+import Filters from "../components/alerts/Filters";
+import Content from "../components/alerts/Content";
 
-const AlertsContent = () => {
+const Alerts = () => {
   return (
     <div className="alerts-container">
       <div className="alerts-content">
@@ -17,4 +17,4 @@ const AlertsContent = () => {
   );
 };
 
-export default AlertsContent;
+export default Alerts;

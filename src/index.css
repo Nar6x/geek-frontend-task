@@ -639,7 +639,7 @@ h2 {
   }
 
   .wrapper {
-    height: 75px;
+    height: 100px;
   }
 
   .wrapper .announcement-container {
@@ -652,7 +652,7 @@ h2 {
   }
 
   .wrapper .stats-content {
-    font-size: 12px;
+    font-size: 10px;
     display: none;
   }
 
