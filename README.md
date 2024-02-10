@@ -1,5 +1,5 @@
 ﻿# Geek Labs' Frontend Task
-- Replicated the design provided in the Figma document.
+- Replicated the design provided in Figma.
 - Ensured responsiveness across various screen sizes.
 - Customized design for optimal viewing on mobile devices.
 
