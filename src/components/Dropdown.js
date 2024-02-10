@@ -22,25 +22,29 @@ const Dropdown = ({ options, defaultOption, label }) => {
       <h2>{label}</h2>
       <div className="dropdown-wrapper">
         <div className="dropdown" onClick={toggleDropdown}>
-          <div className={`dropdown-input ${isOpen ? "rotate-arrow" : ""}`}>
+          <div
+            className={`dropdown-input ${isOpen ? "open rotate-arrow" : ""}`}
+          >
             {selectedOption}
           </div>
           <div className={`dropdown-menu ${isOpen ? "open" : ""}`}>
-            <ul>
-              {options.map((option, index) => (
-                <li
-                  key={index}
-                  onClick={() => handleSelect(option)}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(-1)}
-                  className={`${
-                    isOpen && hoveredIndex === index ? "focused" : ""
-                  } ${selectedOption === option ? "selected-option" : ""}`}
-                >
-                  {option}
-                </li>
-              ))}
-            </ul>
+            <div className="dropdown-menu-wrapper">
+              <ul>
+                {options.map((option, index) => (
+                  <li
+                    key={index}
+                    onClick={() => handleSelect(option)}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(-1)}
+                    className={`${
+                      isOpen && hoveredIndex === index ? "focused" : ""
+                    } ${selectedOption === option ? "selected-option" : ""}`}
+                  >
+                    {option}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

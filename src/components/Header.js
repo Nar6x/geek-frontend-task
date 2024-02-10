@@ -9,18 +9,15 @@ function Header() {
   const [isOpen, setOpen] = useState(false);
   return (
     <div className="header">
-      {/* Logo */}
       <div className="logo">
         <img src={Logo} alt="Logo" />
       </div>
       <div className="header-wrapper">
         <div className="header-container">
-          {/* Hamburger Menu */}
           <div className="burger-icon">
             <Hamburger color="#ffffff" toggled={isOpen} toggle={setOpen} />
           </div>
           <div className="header-content">
-            {/* Search Bar */}
             <input
               id="search"
               type="text"
@@ -28,7 +25,6 @@ function Header() {
               className="search-bar"
             />
             <div className="right">
-              {/* Notification icon */}
               <div className="notification-icon">
                 <img src={Bell} alt="Notification Icon" />
                 <div className="count-container">
@@ -39,22 +35,22 @@ function Header() {
                 <div className="profile">
                   <img src={ProfilePic} alt="Profile" className="profile-pic" />
                 </div>
-                {/* Profile Info */}
                 <div className="profile-info">
                   <p className="name">Moni Roy</p>
                   <p className="role">Admin</p>
                 </div>
-                {/* Dropdown Arrow */}
                 <div className="dropdown-arrow" />
               </div>
             </div>
           </div>
         </div>
         <div className={`burger-menu ${isOpen ? "open" : ""}`}>
-          <ul>
-            <li>Alerts</li>
-            <li>Training</li>
-          </ul>
+          <div className="menu-wrapper">
+            <ul>
+              <li>Alerts</li>
+              <li>Training</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
