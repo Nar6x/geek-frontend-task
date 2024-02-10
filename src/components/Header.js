@@ -12,6 +12,7 @@ function Header() {
   const handleClick = (index) => {
     if (!navItems[index].disabled) {
       setActive(index);
+      setOpen(!isOpen);
     }
   };
 
