@@ -665,13 +665,11 @@ h2 {
     height: 100px;
   }
 
-  .wrapper .announcement-container {
-    font-size: 14px;
-    padding: 0 20px;
-  }
-
+  .wrapper .announcement-container,
   .wrapper.active .announcement-container {
     font-size: 14px;
+    padding: 0 20px;
+    font-weight: 400;
   }
 
   .wrapper .stats-content {
@@ -713,6 +711,7 @@ h2 {
   .wrapper .stats-content,
   .wrapper .announcement-container {
     font-size: 14px;
+    padding: 0 15px;
   }
 }
 
