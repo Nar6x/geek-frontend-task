@@ -7,6 +7,22 @@ import "../index.css";
 
 function Header() {
   const [isOpen, setOpen] = useState(false);
+  const [active, setActive] = useState(null);
+
+  const handleClick = (index) => {
+    if (!navItems[index].disabled) {
+      setActive(index);
+    }
+  };
+
+  const navItems = [
+    { label: "Trading", disabled: true },
+    { label: "Automation", disabled: true },
+    { label: "Portfolio", disabled: true },
+    { label: "Alerts", disabled: false },
+    { label: "Training", disabled: false },
+  ];
+
   return (
     <div className="header">
       <div className="logo">
@@ -47,8 +63,20 @@ function Header() {
         <div className={`burger-menu ${isOpen ? "open" : ""}`}>
           <div className="menu-wrapper">
             <ul>
-              <li>Alerts</li>
-              <li>Training</li>
+              {navItems.map((item, index) => (
+                <li
+                  className={`${item.disabled ? " disabled" : ""}${
+                    index === active ? " active" : ""
+                  }`}
+                  key={index}
+                  onClick={() => handleClick(index)}
+                >
+                  {item.disabled && (
+                    <span className="coming-soon">Coming Soon</span>
+                  )}
+                  {item.label}
+                </li>
+              ))}
             </ul>
           </div>
         </div>

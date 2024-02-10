@@ -200,12 +200,26 @@ h2 {
 .burger-menu li {
   list-style: none;
   padding: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.burger-menu li:hover {
+.burger-menu li:not(.disabled) {
+  color: #484848;
+}
+
+.burger-menu li.active {
+  color: #ffffff;
+}
+
+.burger-menu li:hover:not(.disabled) {
   background-color: #212121;
   border-radius: 8px;
 }
+
+/* color: #5a5a5a; */
 
 @media (max-width: 768px) {
   .logo {
@@ -219,7 +233,7 @@ h2 {
   }
 
   .burger-menu.open {
-    max-height: 200px;
+    max-height: 375px;
   }
 
   .header {
